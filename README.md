@@ -25,3 +25,5 @@ firebase test
                 messagingSenderID: <your-messagingSenderID>
             };
             firebase.initializeApp(config);
+
+            "You can get your config settings from your firebase console."
