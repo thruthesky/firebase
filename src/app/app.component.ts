@@ -13,13 +13,12 @@ export class MyApp {
 
   constructor(platform: Platform) {
     var config = {
-    apiKey: "AIzaSyCKGAejpeOxxSHELi_Xbo2UdRa8xQPmipU",
-    authDomain: "test-ec3e3.firebaseapp.com",
-    databaseURL: "https://test-ec3e3.firebaseio.com",
-    storageBucket: "test-ec3e3.appspot.com",
-    messagingSenderId: "55749236444"
-  };
-
+    apiKey: "AIzaSyC2rp0jey5iFDbgSDi5mNw4ujCA68FG7TY",
+    authDomain: "fireframe-650a8.firebaseapp.com",
+    databaseURL: "https://fireframe-650a8.firebaseio.com",
+    storageBucket: "fireframe-650a8.appspot.com",
+    messagingSenderId: "1076014174759"
+    };
     firebase.initializeApp(config);
     let db = firebase.database();
     let ref = db.ref("/");

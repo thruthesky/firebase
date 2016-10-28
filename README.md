@@ -8,8 +8,8 @@ firebase test
 
 ####Install all the required packages-
 
-            * npm install @ionic/app-script
-            * npm install firebse --save
+            * npm install @ionic/app-scripts@beta
+            * npm install firebase --save
 
 ####Setting up
         # Import firebase into your app.component
