@@ -23,7 +23,7 @@ post{
         post_id : 1,
         post_title : "",
         username : "steven",
-        email : "steven.dev",
+        email : "sample@email.com",
         password : "as23423wdf",
         timestamp : "",
         post_content:""      
