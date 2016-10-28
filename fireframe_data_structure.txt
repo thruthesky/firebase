@@ -1,0 +1,48 @@
+post_meta{
+
+    "one":{
+        post_id : 1,
+        meta_name : "name",
+        meta_value: "Steven"
+    },
+    "two":{
+        ...   
+    },
+    ...
+}
+
+category {
+    one: "student",
+}
+
+post{
+    "one"{
+        category : "",
+        post_id : 1,
+        post_title : "",
+        username : "steven",
+        email : "steven.dev",
+        password : "as23423wdf",
+        timestamp : "",
+        post_content:""      
+    }
+}
+
+comment {
+    one{
+    comment_id:"",
+    post_id: 1,
+    user_id: "",
+    email : "",
+    content : "",
+    timestamp: ""
+    },
+    two{
+        ...
+    }
+    ...
+]
+
+
+
+
