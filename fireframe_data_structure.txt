@@ -1,5 +1,4 @@
 post_meta{
-
     "one":{
         post_id : 1,
         meta_name : "name",
@@ -12,7 +11,10 @@ post_meta{
 }
 
 category {
-    one: "student",
+    one: {
+      category_ID: 1,
+      category_name:  "student"
+    }
 }
 
 post{
@@ -25,6 +27,9 @@ post{
         password : "as23423wdf",
         timestamp : "",
         post_content:""      
+    },
+    "two{
+    ...
     }
 }
 
