@@ -13,13 +13,18 @@ export class MyApp {
 
   constructor(platform: Platform) {
     var config = {
-      apiKey: "AIzaSyCKikQsDJQwKH-95TYi9T4x4eBAc4teQrA",
-      authDomain: "ionicfirebase3.firebaseapp.com",
-      databaseURL: "https://ionicfirebase3.firebaseio.com",
-      storageBucket: "ionicfirebase3.appspot.com",
-      messagingSenderId: "309757644940"
-    };
+    apiKey: "AIzaSyCKGAejpeOxxSHELi_Xbo2UdRa8xQPmipU",
+    authDomain: "test-ec3e3.firebaseapp.com",
+    databaseURL: "https://test-ec3e3.firebaseio.com",
+    storageBucket: "test-ec3e3.appspot.com",
+    messagingSenderId: "55749236444"
+  };
+
     firebase.initializeApp(config);
+    let db = firebase.database();
+    let ref = db.ref("/");
+
+
 
     // firebase.auth().onAuthStateChanged((user)=>{
     //   if(!user)this.rootPage = Login
