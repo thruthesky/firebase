@@ -13,11 +13,11 @@ export class MyApp {
 
   constructor(platform: Platform) {
     var config = {
-      apiKey: "AIzaSyCKikQsDJQwKH-95TYi9T4x4eBAc4teQrA",
-      authDomain: "ionicfirebase3.firebaseapp.com",
-      databaseURL: "https://ionicfirebase3.firebaseio.com",
-      storageBucket: "ionicfirebase3.appspot.com",
-      messagingSenderId: "309757644940"
+    apiKey: "AIzaSyC2rp0jey5iFDbgSDi5mNw4ujCA68FG7TY",
+    authDomain: "fireframe-650a8.firebaseapp.com",
+    databaseURL: "https://fireframe-650a8.firebaseio.com",
+    storageBucket: "fireframe-650a8.appspot.com",
+    messagingSenderId: "1076014174759"
     };
     firebase.initializeApp(config);
 
