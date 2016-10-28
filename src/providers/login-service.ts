@@ -17,7 +17,6 @@ export class UserService {
   register( email:string, password: string ): any{
     return this.fireAuth.createUserWithEmailAndPassword( email, password )
   }
-
   logout():any{
     return this.fireAuth.signOut();
   }

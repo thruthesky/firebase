@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { NavController } from 'ionic-angular';
 import * as firebase from 'firebase';
+import { Database } from '../../fireframe/database';
 
 /*
   Generated class for the Register page.
@@ -25,6 +26,7 @@ export class Register {
     private navCtrl: NavController,
 
     private formBuilder: FormBuilder,
+    private db: Database
     ) {
       this.auth = firebase.auth();
       this. registerForm = formBuilder. group( {
@@ -41,11 +43,23 @@ export class Register {
   onSubmitRegister(){
     this.submitAttempt = true;
     if ( this.registerForm.valid ){   
+
+      /*
+      this.db.register( 'email', 'pass' )
+        .then( x => {
+
+        } )
+        .error( x => {
+
+        });      
+        */
+
       this.auth.createUserWithEmailAndPassword( this.registerForm.value.email, this.registerForm.value.password ). then(() => {
       this.navCtrl.pop();
       }, err => {
         console.log( err )
       });
+
     } 
   }
 }
