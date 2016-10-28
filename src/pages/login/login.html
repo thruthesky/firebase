@@ -14,22 +14,22 @@
 
 <ion-content padding>
 
-  <form [formGroup]="loginForm" (submit)="onSubmit()" novalidate>
+ 
 
     <ion-item>
       <ion-label floating>Email</ion-label>
-      <ion-input #email formControlName="email" type="email"></ion-input>
+      <ion-input [(ngModel)]="userMail" type="email"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label floating>Password</ion-label>
-      <ion-input #password formControlName="password" type="password"></ion-input>
+      <ion-input [(ngModel)]="userPass" type="password"></ion-input>
     </ion-item>
     <br>
-    <button ion-button type="submit">
+    <button ion-button (click)="onSubmit()">
       Login
     </button>
 
-  </form>
+  
 
   <button (click)="onClickRegister()" ion-button>Register</button>
 </ion-content>

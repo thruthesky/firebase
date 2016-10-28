@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { NavController } from 'ionic-angular';
-import { UserService } from '../../providers/login-service';
+import * as firebase from 'firebase';
 
 /*
   Generated class for the Register page.
@@ -14,6 +14,7 @@ import { UserService } from '../../providers/login-service';
   templateUrl: 'register.html'
 })
 export class Register {
+  auth:any
 
   public registerForm: any;
   emailChanged: boolean;
@@ -22,11 +23,10 @@ export class Register {
 
   constructor(
     private navCtrl: NavController,
-    private loginSrvc: UserService,
-    private formBuilder: FormBuilder,
-    private userSrvc: UserService
-    ) {
 
+    private formBuilder: FormBuilder,
+    ) {
+      this.auth = firebase.auth();
       this. registerForm = formBuilder. group( {
       email: [ '', Validators.compose( [ Validators.required ] ) ],
       password: [ '', Validators.compose( [ Validators.minLength ( 6 ), Validators.required ] ) ]
@@ -41,7 +41,7 @@ export class Register {
   onSubmitRegister(){
     this.submitAttempt = true;
     if ( this.registerForm.valid ){   
-      this.userSrvc.register( this.registerForm.value.email, this.registerForm.value.password ). then(() => {
+      this.auth.createUserWithEmailAndPassword( this.registerForm.value.email, this.registerForm.value.password ). then(() => {
       this.navCtrl.pop();
       }, err => {
         console.log( err )

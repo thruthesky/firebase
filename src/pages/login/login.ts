@@ -1,9 +1,9 @@
 import { NavController } from 'ionic-angular';
 import { Component } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
-import { UserService } from '../../providers/login-service';
+
 import { HomePage } from '../home/home';
 import { Register } from '../register/register';
+import * as firebase from 'firebase';
 
 
 @Component({
@@ -12,30 +12,24 @@ import { Register } from '../register/register';
   providers: [  ]
 })
 export class Login {
+  auth: any
+  userMail:string;
+  userPass:string;
   public loginForm;
-  emailChanged: boolean = false;
-  passwordChanged: boolean = false;
-  submitAttempt: boolean = false;
-  loading: any;
+
 
   constructor(
     public nav: NavController, 
-    private userSrvc: UserService, 
-    private formBuilder: FormBuilder,
+
     private navCtrl: NavController 
     ) {
-    this.loginForm = formBuilder.group( {
-      email: [ '', Validators.compose ( [ Validators.required ] ) ],
-      password: [ '', Validators.compose ( [ Validators.minLength ( 6 ), Validators.required ] ) ]
-    });
+      this.auth = firebase.auth();
   }
-  
-
 
   onSubmit(){
-    this.submitAttempt = true;
-    if ( this.loginForm.valid )
-        this.userSrvc.login( this.loginForm.value.email,this.loginForm.value.password ). then( userSrvc => {
+    console.log(this.userMail)
+    
+        this.auth.signInWithEmailAndPassword( this.userMail,this.userPass ). then( userSrvc => {
           this.nav.setRoot( HomePage );
         }, error => {
             console.log( error )

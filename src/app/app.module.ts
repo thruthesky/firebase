@@ -4,7 +4,7 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { Login } from  '../pages/login/login';
 import { Register } from '../pages/register/register';
-import { UserService } from '../providers/login-service';
+
 
 @NgModule({
   declarations: [
@@ -23,6 +23,6 @@ import { UserService } from '../providers/login-service';
     Login,
     Register
   ],
-  providers: [ UserService ]
+  providers: [  ]
 })
 export class AppModule {}
