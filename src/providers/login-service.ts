@@ -8,6 +8,7 @@ export class UserService {
 
   public fireAuth: any;
 
+/*
   constructor(public http: Http) {
     this.fireAuth = firebase.auth();
   }
@@ -20,4 +21,5 @@ export class UserService {
   logout():any{
     return this.fireAuth.signOut();
   }
+  */
 }

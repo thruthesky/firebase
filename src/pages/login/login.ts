@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 
 import { HomePage } from '../home/home';
 import { Register } from '../register/register';
-import * as firebase from 'firebase';
+//import * as firebase from 'firebase';
 
 
 @Component({
@@ -23,17 +23,19 @@ export class Login {
 
     private navCtrl: NavController 
     ) {
-      this.auth = firebase.auth();
+      //this.auth = firebase.auth();
   }
 
   onSubmit(){
     console.log(this.userMail)
     
+    /*
         this.auth.signInWithEmailAndPassword( this.userMail,this.userPass ). then( userSrvc => {
           this.nav.setRoot( HomePage );
         }, error => {
             console.log( error )
         });
+        */
   }
 
   onClickRegister(){
