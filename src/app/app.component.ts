@@ -18,6 +18,9 @@ export class MyApp {
     db.connect();
 
 
+    let category = new Category();
+    category.delete( 'gallery', s => alert('deleted'), e => alert('failed: ' + e ) );
+
 
   }
 }
