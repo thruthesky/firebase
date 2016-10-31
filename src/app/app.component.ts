@@ -2,8 +2,7 @@ import { Component } from '@angular/core';
 import { Platform } from 'ionic-angular';
 //import * as firebase from 'firebase';
 import { Login } from  '../pages/login/login';
-import { Database } from '../fireframe/database';
-import { Category } from '../fireframe/category';
+import { CategoryTest } from '../fireframe/category-test';
 
 
 @Component({
@@ -14,17 +13,22 @@ export class MyApp {
 
   constructor(platform: Platform) {
 
-    let db = new Database();
-    db.connect();
 
 
-    let category = new Category();
+    //let category = new Category();
+    new CategoryTest();
 
 
-   //category.gets( 'id', x => console.log(x) );
-   //category.gets( 'name', x => console.log(x) );
 
-   category.gets( x => console.log(x) );
+
+
+/*
+    new Category().ref.remove( e => {
+      if ( e ) console.log('error', e);
+    });
+    */
+
+//   category.gets( x => console.log(x) );
   
 
   }
