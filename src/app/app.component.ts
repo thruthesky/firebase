@@ -19,8 +19,14 @@ export class MyApp {
 
 
     let category = new Category();
-    category.delete( 'gallery', s => alert('deleted'), e => alert('failed: ' + e ) );
 
+
+   //category.gets( 'id', x => console.log(x) );
+   //category.gets( 'name', x => console.log(x) );
+
+   category.ref.orderByChild('name')
+    .once('child_added')
+    .then( data => console.log('then:', data.val()));
 
   }
 }
