@@ -24,9 +24,8 @@ export class MyApp {
    //category.gets( 'id', x => console.log(x) );
    //category.gets( 'name', x => console.log(x) );
 
-   category.ref.orderByChild('name')
-    .once('child_added')
-    .then( data => console.log('then:', data.val()));
+   category.gets( x => console.log(x) );
+  
 
   }
 }
