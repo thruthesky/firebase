@@ -3,6 +3,7 @@ import { Platform } from 'ionic-angular';
 //import * as firebase from 'firebase';
 import { Login } from  '../pages/login/login';
 import { CategoryTest } from '../fireframe/test/category-test';
+import { PostTest } from '../fireframe/test/post-test';
 
 
 @Component({
@@ -11,14 +12,22 @@ import { CategoryTest } from '../fireframe/test/category-test';
 export class MyApp {
   rootPage = Login;
 
+
   constructor(platform: Platform) {
 
 
 
     //let category = new Category();
-    new CategoryTest();
-
-
+    new CategoryTest().test(
+      () => {
+        console.log("CategoryTest End");
+        new PostTest().test(
+          () => {
+            console.log('PostTest End');
+          }
+        )
+      }
+    );
 
 
 
