@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Platform } from 'ionic-angular';
 //import * as firebase from 'firebase';
 import { Login } from  '../pages/login/login';
-import { CategoryTest } from '../fireframe/category-test';
+import { CategoryTest } from '../fireframe/test/category-test';
 
 
 @Component({
