@@ -1,8 +1,8 @@
 import { NavController } from 'ionic-angular';
 import { Component } from '@angular/core';
 
-import { HomePage } from '../home/home';
-import { Register } from '../register/register';
+//import { HomePage } from '../home/home';
+//import { Register } from '../register/register';
 //import * as firebase from 'firebase';
 
 
@@ -39,6 +39,6 @@ export class Login {
   }
 
   onClickRegister(){
-    this.navCtrl.push( Register );
+    //this.navCtrl.push( Register );
   }
 }

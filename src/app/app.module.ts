@@ -4,6 +4,7 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { Login } from  '../pages/login/login';
 import { Register } from '../pages/register/register';
+import { CategoryPage } from '../pages/category/category';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { Register } from '../pages/register/register';
     MyApp,
     HomePage,
     Login,
-    Register
+    Register,
+    CategoryPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -21,7 +23,8 @@ import { Register } from '../pages/register/register';
     MyApp,
     HomePage,
     Login,
-    Register
+    Register,
+    CategoryPage
   ],
   providers: [  ]
 })
