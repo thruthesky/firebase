@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import * as firebase from 'firebase';
+//import * as firebase from 'firebase';
 import { NavController } from 'ionic-angular';
 import { CategoryPage } from '../category/category';
 
