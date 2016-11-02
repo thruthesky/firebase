@@ -15,4 +15,13 @@
 
 <ion-content padding>
 
+  <button ion-button (click)="onClickCreateCategory()">Create New Category</button>
+
+
+  <ion-grid *ngFor=" let id of categories ">
+    <ion-row>
+      <ion-col width-20>{{ id }}</ion-col>
+    </ion-row>
+  </ion-grid>
+
 </ion-content>

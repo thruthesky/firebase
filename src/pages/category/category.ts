@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
+import { Category, categoryData } from '../../fireframe/category';
+import { CategoryEditPage } from '../category-edit/category-edit';
+
 /*
   Generated class for the Category page.
 
@@ -13,10 +16,39 @@ import { NavController } from 'ionic-angular';
 })
 export class CategoryPage {
 
-  constructor(public navCtrl: NavController) {}
+  c = categoryData;
+  category: Category = new Category();
+  data;
+  constructor(public navCtrl: NavController) {
+  }
+
+  displayCategory() {
+    this.category.gets( re => {
+      console.log(re);
+      this.data = re;
+      console.log( this.categories );
+    });
+  }
+
+  get categories() {
+    if ( this.data === void 0 ) return [];
+    return Object.keys( this.data );
+  }
 
   ionViewDidLoad() {
-    console.log('Hello CategoryPage Page');
+    // console.log('Hello CategoryPage Page');
+  }
+  ionViewWillEnter() {
+    //console.log('CategoryPage will enter');
+    this.displayCategory();
+  }
+
+  onClickSubmit() {
+
+  }
+
+  onClickCreateCategory() {
+    this.navCtrl.push( CategoryEditPage );
   }
 
 }
