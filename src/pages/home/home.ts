@@ -2,9 +2,10 @@ import { Component } from '@angular/core';
 //import * as firebase from 'firebase';
 import { NavController } from 'ionic-angular';
 import { CategoryPage } from '../category/category';
-import { CategoryTest } from '../../fireframe/test/category-test';
+ import { CategoryTest } from '../../fireframe/test/category-test';
 import { PostTest } from '../../fireframe/test/post-test';
 import { CategoryTestByRandy } from '../../fireframe/test/category-test-by-randy';
+import { CategoryRandyTest } from '../../fireframe/test/randy/category-test';
 
 @Component({
   selector: 'page-home',
@@ -15,6 +16,7 @@ export class HomePage {
   constructor( private navCtrl: NavController ) {
     navCtrl.push( CategoryPage );
 
+    this.onClickTest();
 
 /*
     new CategoryTest().test(
@@ -32,6 +34,13 @@ export class HomePage {
 
 //    new CategoryTestByRandy().test( () => new CategoryTest().test( () => new PostTest().test( () => console.log('End')) ) );
 
+  }
+
+
+  onClickTest() {
+    new CategoryRandyTest().test( () => {
+      new CategoryTestByRandy().test( () => new CategoryTest().test( () => new PostTest().test( () => console.log('End')) ) );
+    });
   }
 
 
