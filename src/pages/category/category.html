@@ -18,12 +18,16 @@
   <button ion-button (click)="onClickCreateCategory()">Create New Category</button>
 
 
-  <ion-grid *ngFor=" let id of categories ">
+  <ion-grid *ngFor=" let id of categories">
     <ion-row>
       <ion-col width-20>{{ id }}</ion-col>
       <ion-col width-20>{{ data[id].name }}</ion-col>
       <ion-col width-20>{{ data[id].title }}</ion-col>
       <ion-col width-20>{{ data[id].description }}</ion-col>
+      <ion-col width-20>
+        <button ion-button (click)="onClickEdit(id)">Edit</button>
+        <button ion-button (click)="onClickDelete(id)">Delete</button>
+        </ion-col>
 
     </ion-row>
   </ion-grid>

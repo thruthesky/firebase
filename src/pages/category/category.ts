@@ -19,6 +19,7 @@ export class CategoryPage {
   c = categoryData;
   category: Category = new Category();
   data;
+  keys;
   constructor(public navCtrl: NavController) {
   }
 
@@ -39,7 +40,7 @@ export class CategoryPage {
     // console.log('Hello CategoryPage Page');
   }
   ionViewWillEnter() {
-    //console.log('CategoryPage will enter');
+    console.log('CategoryPage will enter');
     this.displayCategory();
   }
 
@@ -49,6 +50,22 @@ export class CategoryPage {
 
   onClickCreateCategory() {
     this.navCtrl.push( CategoryEditPage );
+  }
+
+  onClickDelete( key ) {
+    console.log('delete: ' + key);
+    this.category.delete( key, s => {
+      if ( s ) alert('Error: ' + s);
+      else {
+        console.log('success: removing from content');
+        this.data = {};
+        this.displayCategory();
+      }
+
+    }, e => {
+      alert('Error: ' + e);
+    });
+
   }
 
 }
