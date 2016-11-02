@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { Platform } from 'ionic-angular';
 import { HomePage } from  '../pages/home/home';
-import { CategoryTest } from '../fireframe/test/category-test';
-import { PostTest } from '../fireframe/test/post-test';
+//import { CategoryTest } from '../fireframe/test/category-test';
+//import { PostTest } from '../fireframe/test/post-test';
 
 
 @Component({

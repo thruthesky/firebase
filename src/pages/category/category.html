@@ -21,6 +21,10 @@
   <ion-grid *ngFor=" let id of categories ">
     <ion-row>
       <ion-col width-20>{{ id }}</ion-col>
+      <ion-col width-20>{{ data[id].name }}</ion-col>
+      <ion-col width-20>{{ data[id].title }}</ion-col>
+      <ion-col width-20>{{ data[id].description }}</ion-col>
+
     </ion-row>
   </ion-grid>
 

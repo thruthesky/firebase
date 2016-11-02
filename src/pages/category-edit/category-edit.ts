@@ -22,4 +22,14 @@ export class CategoryEditPage {
     console.log('Hello CategoryEditPage Page');
   }
 
+
+  onClickSubmit() {
+    console.log( this.c );
+
+    this.category.sets( this.c ).create( s => {
+      this.navCtrl.pop();
+    }, e => {
+      alert('Error: ' + e );
+    } );
+  }
 }
